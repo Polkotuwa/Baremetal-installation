@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p><img src="http://i.imgur.com/rhYyV3l.png" /></p>
+<h3>SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY</h3>
+<h2>Enterprise Standards and Best Practices for IT Infrastructure</h2>
+<h2>4th Year 2nd Semester 2016</h2>
+<h2>Baremetal installation Assignment</h2>
+<h4>Name : P.W.J.B Polkotuwa.</h4>
+<h4>SLIIT ID: IT13008642</h4>
+<h4>Practical Session: weekday</h4>
+<h4>Practical Number : Lab 4</h4>
+<p><strong>Step 1</strong> -First we have to go to New virtual machine wizard in VMWare workstation and give path of the image file of VMWare-VMvisor.</p>
+<p><img src="http://i.imgur.com/Ne1SDSv.png" /></p>
+<p><img src="http://i.imgur.com/4NEDPvy.png" /></p>
+<p><strong>Step 2</strong> - Then we can install virtual machine by giving name and maximum disk size.</p>
+<p><img src="http://i.imgur.com/0sHqZQq.png" /></p>
+<p><img src="http://i.imgur.com/NRxNAKu.png" /> </p>
+<p><img src="http://i.imgur.com/auCE9Ab.png" /> </p>
+<p><img src="http://i.imgur.com/rkEdpRN.png" /></p>
+<p>** step 3** - Once we choose installation option it provides the details of the each file that need to be loaded.</p>
+<p><img src="http://i.imgur.com/OcQHOhs.png" /></p>
+<p>** step 4** - Then we can see welcome screen containing information regarding VMware’s Compatibility Guide. To continue with the installation process, press Enter.</p>
+<p><img src="http://i.imgur.com/ELOQVsT.png" /></p>
+<p><strong>step 5</strong> - Then we have to accept the end user license agreement.</p>
+<p><img src="http://i.imgur.com/BUCfYFm.png" /></p>
+<p><strong>step 6</strong> - Then we have to give a location to which to install ESXi 5. There we have a single 40 GB volume from which to choose as an install location on my machine.</p>
+<p><img src="http://i.imgur.com/DnQZW6M.png" /></p>
+<p><strong>step 7</strong> - Next we have to choose our key board layout.</p>
+<p><img src="http://i.imgur.com/2YywKN8.png" /></p>
+<p><strong>step8</strong> - Then we have to provide password for the root user account.</p>
+<p><img src="http://i.imgur.com/nw4j8iM.png" /></p>
+<p><strong>step 9</strong> - Then ESXi installer  scans system to get additional information. Once that’s complete, it  asked to confirm the installation by pressing the F11 button . Once we initiate the installation, our selected disk will be repsrtitioned. Throughout the process, the installer provides you with an installation status.</p>
+<p><img src="http://i.imgur.com/67XcT9j.png" /></p>
+<p><img src="http://i.imgur.com/61kSJIb.png" /></p>
+<p><img src="http://i.imgur.com/g9HHfAB.png" /></p>
+<p><strong>step10</strong> - When the installation process has finished we will get a message and also we can see the ip address.</p>
+<p><img src="http://i.imgur.com/U4LaWeS.png" /></p>
+<p><img src="http://i.imgur.com/AdO9WIy.png" /></p>
+<p><strong>step11</strong> - Then we have to install the vspire client as a administrative tool to work with server.</p>
+<p><img src="http://i.imgur.com/EUE1uw6.png" /> </p>
+<p><img src="http://i.imgur.com/Zb8DZph.png" /> </p>
+<p><img src="http://i.imgur.com/G6S8GGT.png" /></p>
+<p><img src="http://i.imgur.com/xWVffZ5.png" /> </p>
+<p><img src="http://i.imgur.com/33KjzSh.png" /></p>
+<p><img src="http://i.imgur.com/pCLmb1V.png" /></p>
+<p><img src="http://i.imgur.com/GN3mv0d.png" /></p>
+<p><img src="http://i.imgur.com/OTgKHto.png" /></p>
+<p><img src="http://i.imgur.com/PmpmdUc.png" /></p>
+<p><strong>step12</strong> - Start the vSphere Client by opening Start &gt; All Programs &gt; VMware &gt; VMware Sphere Client. This will open up the vSphere Client login page.There we have to Specify the ESXi host and username and password.</p>
+<p><img src="http://i.imgur.com/XFhJ43u.png" /></p>
+<p><strong>step13</strong> - After we click login button we can see security warning.It is safe to ignore it.</p>
+<p><img src="http://i.imgur.com/ZLUaXr6.png" /></p>
+<p><strong>step14</strong> - Once we gained access to the vSphere Client,we can click inventory, there select summary tab ,there right click in the storage and select browse the database.</p>
+<p><img src="http://i.imgur.com/GNfmo9V.png" /></p>
+<p><img src="http://i.imgur.com/nxcxm01.png" /></p>
+<p><img src="http://i.imgur.com/KOBYki7.png" /> </p>
+<p><img src="http://i.imgur.com/7H7xaeu.png" /> </p>
+<p><img src="http://i.imgur.com/v7d3rNc.png" /></p>
+<p><img src="http://i.imgur.com/gEnGq6c.png" /></p>
+<p><strong>step 15</strong> - Then we have to upload the iso file of operating system which we have to use as a virtual machine.</p>
+<p><img src="http://i.imgur.com/YcZQEvH.png" /> </p>
+<p><img src="http://i.imgur.com/76PxLyU.png" /></p>
+<p><strong>step16</strong> - Then we have to right click on the ip address and select create new virtual machine.</p>
+<p><img src="http://i.imgur.com/fZStUoA.png" /></p>
+<p><strong>step17</strong> - Then we have to select configuration settings and give a name.</p>
+<p><img src="http://i.imgur.com/UUkjDV7.png" /></p>
+<p><img src="http://i.imgur.com/qFqdxw9.png" /></p>
+<p><strong>step18</strong> - Then we have to select storage where we have to create our virtual machine and contents.</p>
+<p><img src="http://i.imgur.com/2s73cnQ.png" /></p>
+<p><strong>step19</strong> - Then we have to specify the guest operating system type and its version.</p>
+<p><img src="http://i.imgur.com/56AUD6t.png" /></p>
+<p><strong>step20</strong> - Then we have to select network and adapter.For adapter we have to give E1000.</p>
+<p><img src="http://i.imgur.com/2jxTALl.png" /></p>
+<p><strong>step21</strong> - Then we have to create a disk there we have to use thin provisioning.</p>
+<p><img src="http://i.imgur.com/cSLhAr6.png" /></p>
+<p><strong>step22</strong> - Then we can see our virtual machine under ip address.</p>
+<p><img src="http://i.imgur.com/EC5VF3z.png" /></p>
+<p><img src="http://i.imgur.com/cbAlJtp.png" /></p>
+<p><strong>step23</strong> - Then we have to install operating system to our virtual machine.for that we have to right click on virtual machine and click edit settings to go to properties.</p>
+<p><img src="http://i.imgur.com/BQZ8ZM3.png" /></p>
+<p><strong>step24</strong> - Then under hardware select CD drive as client device.</p>
+<p><img src="http://i.imgur.com/HVeOLTX.png" /></p>
+<p><strong>step25</strong> - Then we have to select the iso file of operating system which we saved in data storage.</p>
+<p><img src="http://i.imgur.com/BuNLuIM.png" /></p>
+<p><img src="http://i.imgur.com/bqixiYP.png" /></p>
+<p><img src="http://i.imgur.com/Vnzeh0B.png" /></p>
+<p><strong>step26</strong> - Then we can work with virtual machine.</p>
+<p><img src="http://i.imgur.com/yseO4aO.png" /></p>
+<p><img src="http://i.imgur.com/DOkGZlL.png" /> </p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
